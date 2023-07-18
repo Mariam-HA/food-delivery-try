@@ -1,18 +1,28 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const RestaurantCard = ({ item }) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={item.image} />
-      <View style={styles.details}>
-        <Text style={styles.text}>{item.name}</Text>
-        <Text style={styles.rating}>rating:{item.rating}</Text>
-        <Text style={styles.deliveryTime}>
-          Delivery Time:{item.deliveryTime}
-        </Text>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("menuList", {
+          menu: item.menu,
+        });
+      }}
+    >
+      <View style={styles.card}>
+        <Image style={styles.image} source={item.image} />
+        <View style={styles.details}>
+          <Text style={styles.text}>{item.name}</Text>
+          <Text style={styles.rating}>rating:{item.rating}</Text>
+          <Text style={styles.deliveryTime}>
+            Delivery Time:{item.deliveryTime}
+          </Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

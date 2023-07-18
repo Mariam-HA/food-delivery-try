@@ -42,6 +42,33 @@ const restaurants = [
     rating: 4.5,
     deliveryTime: "30-45 min",
     image: require("../../assets/images.jpeg"),
+    menu: [
+      {
+        image: require("../../assets/images.jpeg"),
+        price: "11KD",
+        ingredients: ["tomato", "lemon"],
+      },
+      {
+        image: require("../../assets/images.jpeg"),
+        price: "11KD",
+        ingredients: ["tomato", "lemon"],
+      },
+      {
+        image: require("../../assets/images.jpeg"),
+        price: "11KD",
+        ingredients: ["tomato", "lemon"],
+      },
+      {
+        image: require("../../assets/images.jpeg"),
+        price: "11KD",
+        ingredients: ["tomato", "lemon"],
+      },
+      {
+        image: require("../../assets/images.jpeg"),
+        price: "11KD",
+        ingredients: ["tomato", "lemon"],
+      },
+    ],
   },
   {
     id: "5",

@@ -1,18 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import CategoryList from "./src/components/CategoryList";
+import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet, View } from "react-native";
 import Heder from "./src/components/Heder";
-import RestaurantsList from "./src/components/RestaurantsList";
-import MenuScreen from "./src/screens/MenuScreen";
+import RootNavigation from "./src/navigation";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <StatusBar style="auto" /> */}
       <Heder />
-      {/* <CategoryList /> */}
-      <RestaurantsList />
-      {/* <MenuScreen /> */}
+      <NavigationContainer>
+        <RootNavigation />
+      </NavigationContainer>
     </View>
   );
 }
